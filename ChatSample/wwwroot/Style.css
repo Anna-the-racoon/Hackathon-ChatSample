@@ -1,0 +1,80 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+* {
+    list-style-type: none;
+}
+
+:root {
+    --color-primary: #235ad1;
+    --font: 'Lato', sans-serif;
+    --primary: #79C7C5;
+    --secondary: #777777;
+    --white: #F9FBFF;
+    --dark: #555555;
+    --other: #A1E2D9;
+}
+
+.middle {
+    background: var(--dark);
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 55px;
+    bottom: 0;
+    background: var(--white);
+    border-radius: 0 0 10px 10px;
+}
+
+textarea {
+    padding: 7px;
+    width: 74%;
+    left: 5%;
+    position: absolute;
+    border: 0;
+    top: 13px;
+    background: var(--white);
+    color: var(--primary);
+}
+
+textarea::placeholder {
+        color: var(--secondary);
+    }
+
+textarea:focus {
+        color: var(--dark);
+        outline: 0;
+    }
+
+button {
+    background: var(--white);
+    position: absolute;
+    border: 0;
+    font-size: 1em;
+    color: var(--secondary);
+    top: 19px;
+    opacity: 0.8;
+    right: 17px;
+    cursor: pointer;
+    outline: 0;
+}
+
+button:hover {
+        transform: scale(1.1);
+        transition: all .3s ease-in-out;
+        color: var(--primary);
+    }
+
+.middle {
+    position: absolute;
+    background: var(--white);
+    width: 100%;
+    opacity: 0.85;
+    top: 60px;
+    height: 80%;
+}
+
+.sendmessage {
+    background: white;
+}
