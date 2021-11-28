@@ -15,7 +15,9 @@
     --other: #A1E2D9;
 }
 .mess {
-    border: 1px solid #5c7ab8;
+    margin: 7px;
+    padding: 5px;
+    border-radius: 10px;
     background-color: #c7daff;
     margin: 5px;
 }
