@@ -1,8 +1,9 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-
-*{
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+* {
     list-style-type: none;
     box-sizing: border-box;
+   
 }
 
 :root {
@@ -15,15 +16,21 @@
     --other: #A1E2D9;
 }
 .mess {
+    font-family: 'EB Garamond', serif;
     margin: 7px;
     padding: 5px;
     border-radius: 10px;
     background-color: #c7daff;
     margin: 5px;
 }
-.myname_time {
+.msg {
+
+    font-size:20px;
+}
+
+.name_time {
     color: #5c7ab8;
-    font-size: 10px;
+    font-size: 14px;
 }
 body, html {
     overflow-x: hidden;
@@ -54,12 +61,14 @@ body, html {
     overflow-x: hidden;
 }
 #discussion {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
     font-family: inherit;
     font-size: 1em;
     flex-flow: column nowrap;
     align-items: flex-end;
     width: 100%;
-    margin: 0 auto;
 }
 
 .container {
@@ -68,13 +77,11 @@ body, html {
     height: 10vh;
     text-align: center;
 }
-textarea {
+#message {
     width: 89vh;
- 
+    word-break: break-word;
     padding: 0;
-        margin: auto;
-    
-
+    margin: auto;
 }
 .sendmessage {
     -webkit-appearance: none;

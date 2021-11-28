@@ -24,9 +24,9 @@
         
 
         var html =
-            '<div class="mess"> <div class="myname_time"> name: ' + encodedName  +
-             '<br>time:'+ date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + '</div>' +
-            '<div>' + encodedMsg + '</div> </div>';
+            '<div class="mess"> <div class="name_time"> name: ' + encodedName  +
+             '<br> time:'+ date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + '</div>' +
+            '<div class="msg">' + encodedMsg + ' </div></div>';
         
         var liElement = document.createElement('li');
         liElement.innerHTML = html;
