@@ -12,35 +12,30 @@
         .withUrl('/chat')
         .build();
 
+   
     // Create a function that the hub can call to broadcast messages.
     connection.on('broadcastMessage', function (name, message) {
         // Html encode display name and message.
         var encodedName = name;
         var encodedMsg = message;
         // Add the message to the page.
-        /*
-         liElement.innerHTML = '<strong>' + encodedName + '</strong>:&nbsp;&nbsp;' + encodedMsg;
-         document.getElementById('discussion').appendChild(liElement);
-      */
+        
         var date = new Date();
-        //if (encodedMsg === null || encodedMsg === undefined || encodedMsg === "") { return; }
-        /*if ($(".chat textarea.message").attr("placeholder") != "")
-        {
-        $(".chat textarea.message").attr("placeholder", "");
-        }*/
+        
 
-        var html = '<i>' + encodedName + '</i>' +
-            '<div>' + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + '</div>' +
-            '<div>' + encodedMsg + '</div>';
+        var html =
+            '<div class="mess"> <div class="myname_time"> name: ' + encodedName  +
+             '<br>time:'+ date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + '</div>' +
+            '<div>' + encodedMsg + '</div> </div>';
+        
         var liElement = document.createElement('li');
         liElement.innerHTML = html;
         document.getElementById('discussion').appendChild(liElement);
+        el = $('.discussion'); // Or getElementById whatever
+        el.scrollTop(el[0].scrollTop);
+        elo = $('.middle'); // Or getElementById whatever
+        elo.scrollTop(el[0].scrollHeight);
         // Add the message to the page.
-
-        //scroll
-        //$(".chat .middle").append($.parseHTML(html));
-        //$(".chat").scrollTop($(".chatbox .middle").height());
-        console.log(html);
     });
 
     // Transport fallback functionality is now built into start.
